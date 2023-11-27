@@ -48,7 +48,7 @@ class Player:
     
     def skill_cooldown(player, skill_level):
         if skill_level == 1:
-            player.skill1_cooldown = 0  # Assuming skill1 has no cooldown
+            player.skill1_cooldown = 0  # skill1 has no cooldown
         elif skill_level == 2:
             player.skill2_cooldown = 1  # Cooldown of 1 turn for skill2
         elif skill_level == 3:
