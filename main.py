@@ -2,7 +2,7 @@ from basic_elements import Player, create_players
 from fight_simulation import simulate_fight
 from health import display_health, take_damage
 from turns_and_skills import player_turn
-from elimination_bracket import display_elimination_bracket
+from elemination_bracket import display_elimination_bracket
 
 def main():
     num_players = int(input("Enter the number of players: "))
