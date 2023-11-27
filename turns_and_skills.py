@@ -17,5 +17,13 @@ def player_turn(player, opponents):
         print("Invalid choice.")
 
 def skill_cooldown(player, skill_level):
-    # Placeholder for skill cooldown logic
-    pass
+    def skill_cooldown(player, skill_level):
+        if skill_level == 1:
+            player.skill1_cooldown = 0  # Assuming skill1 has no cooldown
+        elif skill_level == 2:
+            player.skill2_cooldown = 1  # Cooldown of 1 turn for skill2
+        elif skill_level == 3:
+            player.skill3_cooldown = 2  # Cooldown of 2 turns for skill3
+        else:
+            print("Invalid skill level.")
+        pass
