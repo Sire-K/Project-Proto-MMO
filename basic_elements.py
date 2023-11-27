@@ -35,19 +35,27 @@ class Player:
 
     def choose_skill(self, skill_level):
         if skill_level == 1 and self.skill1_cooldown == 0:
-            self.skill1_cooldown = 0
             damage = 5
             print(f"{self.name} used Skill 1 for {damage} damage.")
         elif skill_level == 2 and self.skill2_cooldown == 0:
-            self.skill2_cooldown = 1
             damage = 10
             print(f"{self.name} used Skill 2 for {damage} damage.")
         elif skill_level == 3 and self.skill3_cooldown == 0:
-            self.skill3_cooldown = 2
             damage = 15
             print(f"{self.name} used Skill 3 for {damage} damage.")
         else:
             print(f"{self.name} tried an invalid skill or it's on cooldown.")
+    
+    def skill_cooldown(player, skill_level):
+        if skill_level == 1:
+            player.skill1_cooldown = 0  # Assuming skill1 has no cooldown
+        elif skill_level == 2:
+            player.skill2_cooldown = 1  # Cooldown of 1 turn for skill2
+        elif skill_level == 3:
+            player.skill3_cooldown = 2  # Cooldown of 2 turns for skill3
+        else:
+            print("Invalid skill level.")
+
 
 def create_players(num_players):
     players = []
